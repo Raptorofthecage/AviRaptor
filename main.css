@@ -1,0 +1,48 @@
+body {
+    margin: auto;
+    color: white;
+}
+h1 {
+    color: rgb(255, 255, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+h2 {
+
+}
+.topline {
+    display: flex;
+    align-items: center;
+    background-color: rgb(14, 0, 139);
+    padding: 1%;
+    height: 50px;
+}
+.main {
+    display: flex;
+    box-sizing: border-box;
+    min-height: 90vh;
+}
+.leftline {
+background-image: linear-gradient(to bottom, rgba(14,0,139),rgb(70, 49, 255));
+box-sizing: border-box;
+}
+.rightmain {
+background-image: linear-gradient(to bottom, rgb(212, 212, 212),rgba(255,255,255));
+box-sizing: border-box;
+}
+@media only screen and (min-width: 799px) {
+    .leftline {
+        min-width: 15vw;
+        max-width: 200px;
+        min-height: 90vh;
+    }
+    .rightmain {
+        min-width: 85vw;
+        min-height: 90vh;
+    }
+}
+@media only screen and (max-width: 799px) {
+    .main {
+        flex-direction: column;
+    }
+}
