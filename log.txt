@@ -1,0 +1,3 @@
+Uke 51: main.html og main.css ble opprettet sammen med nye AviRaptor repository-en. 
+        hovedsiden ble delt opp i topbar, leftbar, og hovedområdet til høyre.
+Uke 02:
