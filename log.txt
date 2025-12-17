@@ -1,3 +1,5 @@
 Uke 51: main.html og main.css ble opprettet sammen med nye AviRaptor repository-en. 
         hovedsiden ble delt opp i topbar, leftbar, og hovedområdet til høyre.
+        logoen ble satt inn i hjørnet.
+        universell utforming påbegynt (mobilvisning).
 Uke 02:
