@@ -34,14 +34,17 @@ box-sizing: border-box;
     .leftline {
         min-width: 15vw;
         max-width: 200px;
-        min-height: 90vh;
+        min-height: 95vh;
     }
     .rightmain {
         min-width: 85vw;
-        min-height: 90vh;
+        min-height: 95vh;
     }
     .logo {
         width: 15%;
+    }
+    h2 {
+        font-size: 1.8vW;
     }
 }
 @media only screen and (max-width: 799px) {
@@ -50,5 +53,8 @@ box-sizing: border-box;
     }
     .logo {
         width: 50%;
+    }
+    h2 {
+        font-size: 4vw;
     }
 }
