@@ -3,19 +3,31 @@ body {
     color: white;
 }
 h1 {
-    color: rgb(255, 255, 255);
+    color: rgb(0,0,0);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
 h2 {
-    color: white;
+    color: rgb(255, 255, 255);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h2:hover {
+    color: rgb(153, 238, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+a:link, a:visited,a:hover,a:active{
+    color: rgba(0,0,0,0);
 }
 .topline {
     display: flex;
     align-items: center;
     background-color: rgb(36, 40, 113);
     min-height: 50px;
+}
+.toptopline {
+    display: flex;
+    align-items: center;
+    min-height: 20px;
 }
 .main {
     display: flex;
