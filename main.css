@@ -1,9 +1,12 @@
 body {
         color: white;
-        margin: auto;
+}
+html, body {
+    height: 100%;
+    margin: 0;
 }
 h1 {
-    color: rgb(0,0,0);
+    color: rgb(255, 255, 255);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
@@ -32,15 +35,30 @@ a:link, a:visited,a:hover,a:active{
 .main {
     display: flex;
     box-sizing: border-box;
-    min-height: 90vh;
+    min-height: 100vh;
 }
 .leftline {
 background-image: linear-gradient(to bottom, rgba(36,40,113),rgb(27, 117, 201));
 box-sizing: border-box;
+align-self: stretch;
 }
 .rightmain {
-background-image: linear-gradient(to bottom, rgb(212, 212, 212),rgba(255,255,255));
+background-image: linear-gradient(to bottom, rgb(129, 137, 255),rgb(231, 244, 255));
 box-sizing: border-box;
+}
+.center {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-image: linear-gradient(to bottom, rgba(36,40,113), rgb(136, 144, 255));
+    border: 1px;
+    box-sizing: border-box;
+}
+.overcenter {
+    display: flex;
+    height: 1px;
+    background-color: black;
+    box-sizing: border-box;
 }
 @media only screen and (min-width: 799px) {
     .leftline {
@@ -49,14 +67,27 @@ box-sizing: border-box;
         min-height: 95vh;
     }
     .rightmain {
-        min-width: 85vw;
+        min-width: 84vw;
         min-height: 95vh;
     }
     .logo {
         width: 15%;
     }
     h2 {
-        font-size: 1.8vW;
+        font-size: 1.8vw;
+    }
+    .web {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    height: 60vh;
+    transition: height 0.4s ease;
+    overflow: hidden;
+    }
+    .close {
+        margin-left:10% ;
+        height: 50px;
+        width: 50px;
     }
 }
 @media only screen and (max-width: 799px) {
@@ -68,5 +99,18 @@ box-sizing: border-box;
     }
     h2 {
         font-size: 4vw;
+    }
+    .web {
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 96%;
+    height: 50vh;
+    transition: height 0.4s ease;
+    overflow: hidden;
+    }
+    .close {
+        margin-left: 2%;
+        height: 80px;
+        width: 80px;
     }
 }

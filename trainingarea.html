@@ -29,19 +29,22 @@
             </a>
         </div>
         <div class="rightmain">
-            <iframe src="https://wiki.ivao.aero/en/home"
-                    width=100%
-                    height=80%
+            <div class="overcenter"></div>
+            <div class="center">
+                <h1>Training area</h1>
+            </div>
+            <button class="close" onclick="toggleFrame('frame1')"><h3>X</h3></button>
+            <iframe class="web" id="frame1" src="https://wiki.ivao.aero/en/home/training/documentation  "
                     frameborder="0"
                     scrolling="auto">
             </iframe>
-            <iframe src="https://www.studyaircrafts.com/"
-                    width=100%
-                    height=80%
+            <button class="close" onclick="toggleFrame('frame2')"><h3>X</h3></button>
+            <iframe class="web" id="frame2" src="https://www.studyaircrafts.com/"
                     frameborder="0"
                     scrolling="auto">
             </iframe>
         </div>
     </div>
+<script src="fold.js"></script>
 </body>
 </html>

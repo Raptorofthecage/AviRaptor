@@ -4,3 +4,6 @@ Uke 51: main.html og main.css ble opprettet sammen med nye AviRaptor repository-
         universell utforming påbegynt (mobilvisning).
         undersidene har blitt opprettet.
 Uke 02:
+        iframe har ikke mulighet til å få opp alle lenker, så nye metoder må finnes.
+Uke 03:
+        Jawascript lages for iframe elementene
