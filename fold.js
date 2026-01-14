@@ -16,3 +16,8 @@ function toggleFrame(id) {
         frame.style.height = "10vh";
     }
 }
+
+toggleFrame("frame1")
+toggleFrame("frame2")
+toggleFrame("frame3")
+toggleFrame("frame4")
