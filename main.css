@@ -6,16 +6,20 @@ html, body {
     margin: 0;
 }
 h1 {
-    color: rgb(255, 255, 255);
+    color: (255, 255, 255);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
 h2 {
-    color: rgb(255, 255, 255);
+    color: auto;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 h2:hover {
     color: rgb(153, 238, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h2 {
+    color: rgb(255, 255, 255);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 p {
@@ -63,6 +67,10 @@ box-sizing: border-box;
     height: 1px;
     background-color: black;
     box-sizing: border-box;
+}
+.storegrid {
+    display: grid;
+    
 }
 @media only screen and (min-width: 799px) {
     .leftline {
