@@ -9,4 +9,5 @@ Uke 03:
         Javascript lages for iframe elementene. endringer i css
 Uke 04:
         store.html lages. grid påbegynt. store.js lages. flybildene lastes ned og legges inn i repository-en.
-        
+Uke 05:
+        store.js, laget liste og begynte på objekter. JSON fil opprettet. 

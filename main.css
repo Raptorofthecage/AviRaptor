@@ -75,14 +75,15 @@ box-sizing: border-box;
     grid-column-gap: 19px;
     grid-row-gap: 19px;
     margin: 19px;
-
-
 }
 .grid {
     display: flex;
+    flex-direction: column;
     background-color: rgb(0, 4, 67);
     border-radius: 10px;
     justify-content: center;
+}
+.imageOfPlane {
 }
 @media only screen and (min-width: 799px) {
     .leftline {
@@ -100,6 +101,10 @@ box-sizing: border-box;
     h2 {
         font-size: 1.8vw;
     }
+    h4 {
+        margin: 2vw;
+        margin-top: 0;
+    }
     .web {
     margin-left: 10%;
     margin-right: 10%;
@@ -113,6 +118,23 @@ box-sizing: border-box;
         height: 50px;
         width: 50px;
     }
+    .storegrid {
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: auto;
+        grid-column-gap: 2vw;
+        grid-row-gap: 2vw;
+        margin: 2vw;
+    }
+    .grid {
+        background-color: rgb(0, 4, 67);
+        border-radius: 10px;
+        justify-content: center;
+    }
+    .imageOfPlane {
+        height: 9vw;
+        width: 20vw;
+        margin: 2vw;
+    }
 }
 @media only screen and (max-width: 799px) {
     .main {
@@ -123,6 +145,10 @@ box-sizing: border-box;
     }
     h2 {
         font-size: 4vw;
+    }
+    h4 {
+        margin: 5vw;
+        margin-top: 0;
     }
     .web {
     margin-left: 2%;
@@ -136,5 +162,22 @@ box-sizing: border-box;
         margin-left: 2%;
         height: 80px;
         width: 80px;
+    }
+    .storegrid {
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+        grid-column-gap: 19px;
+        grid-row-gap: 10vw;
+        margin: 10vw;
+    }
+    .grid {
+        background-color: rgb(0, 4, 67);
+        border-radius: 10px;
+        justify-content: center;
+    }
+    .imageOfPlane {
+        height: 30vw;
+        width: 70vw;
+        margin: 5vw;
     }
 }
