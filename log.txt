@@ -4,10 +4,13 @@ Uke 51: main.html og main.css ble opprettet sammen med nye AviRaptor repository-
         universell utforming påbegynt (mobilvisning).
         undersidene har blitt opprettet.
 Uke 02:
-        iframe har ikke mulighet til å få opp alle lenker, så nye metoder må finnes. Universell Utforming videreutvikles.
+        iframe har ikke mulighet til å få opp alle lenker, 
+        så nye metoder må finnes. Universell Utforming videreutvikles.
 Uke 03:
         Javascript lages for iframe elementene. endringer i css
 Uke 04:
-        store.html lages. grid påbegynt. store.js lages. flybildene lastes ned og legges inn i repository-en.
+        store.html lages. grid påbegynt. store.js lages. 
+        flybildene lastes ned og legges inn i repository-en.
 Uke 05:
         store.js, laget liste og begynte på objekter. JSON fil opprettet. 
+        psuedokode laget. type="module endret på skript" psuedo skrevet over til JS.

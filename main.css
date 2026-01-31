@@ -133,7 +133,7 @@ box-sizing: border-box;
     }
     .imageOfPlane {
         height: 9vw;
-        width: 20vw;
+        width: 85%;
         margin: 2vw;
     }
 }
