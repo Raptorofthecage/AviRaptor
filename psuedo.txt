@@ -1,0 +1,19 @@
+funksjon checkIfExpired = (annonseNummer, datoNå, datoSjekke){
+    Expired = false
+    hvis datoNå[år] > datoSjekke[år] {
+        Expired = true
+    }
+    ellers hvis datoNå[måned] > datoSjekke[måned] {
+        Expired = true
+    }
+    ellers hvis datoNå[dag] > datoSjekke[dag] {
+        Expired = true
+    }
+    hvis Expired = true {
+        kjørFunksjon(genererNyAnnonse(annonseNummer))
+    }
+}
+
+funksjon genererNyAnnonse = (annonseNummer) {
+    gjentaTil nyAnnonseGenerert
+}
