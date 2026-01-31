@@ -1,3 +1,9 @@
+listeOverFlydata [
+    {fly1, data1, data2, sjanse}
+    {fly2, data1, data2, sjanse}
+]
+
+
 funksjon checkIfExpired = (annonseNummer, datoNå, datoSjekke){
     Expired = false
     hvis datoNå[år] > datoSjekke[år] {
@@ -14,6 +20,20 @@ funksjon checkIfExpired = (annonseNummer, datoNå, datoSjekke){
     }
 }
 
+funksjon velgUtFly = () {
+    for i > lengdeAv(listeOverFlydata) {
+        tall = randomTall(0,1)
+        hvis tall < listeOverFlydata.sjanse[i] {
+            returner listeOverFlydata[i]
+            nyAnnonseGenerert = true
+        }
+        ellers {
+        }
+    }
+}
 funksjon genererNyAnnonse = (annonseNummer) {
-    gjentaTil nyAnnonseGenerert
+    nyAnnonseGenerert = false
+    gjentaTil nyAnnonseGenerert {
+        flyValgt = velgUtFly()
+    }
 }
