@@ -16,6 +16,7 @@ let plane = [
         }
 ]
                                                                     /*     INIT END     */
+                                                                     /*    UPDATE ADS    */
 function lookForExpired() {
     for (let i = 0; i < save.length; i++) {
         if (dateNow[2] > save[i].expire[2] ||
@@ -43,7 +44,9 @@ function generateAd(replacableAd) {
         }
     }
 }
-
+function updateJSON() {
+    
+}
 function readInJSON() {
 
 }
