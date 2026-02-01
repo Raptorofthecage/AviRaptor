@@ -64,22 +64,32 @@ function generateAd(replacableAd) {
                     editDate.getUTCDate(), editDate.getUTCMonth() + 1, editDate.getUTCFullYear()
             ]
                 adGenerated = true
+                save[i].price = save[i].price+Math.floor(Math.random()*2-1)*(save[i].price*save[i].priceMultiplier)
+                save[i].wear = save[i].wear+Math.floor(Math.random()*2-1)
                 break
                 }
         }
     }
 }
+
 function updateJSON() {
 
 }
-function readInJSON() {
-
+function readInSave() {
+    for (let i = 0; i < save.length; i++) {
+        p[i].innerHTML = `
+        <img src="${save[i].photo}" alt="photo of plane" class="imageOfPlane">
+        <h4>Type: ${save[i].type}</h4>
+        <h4>Price: ${save[i].price}$</h4>
+        <h4>Wear: ${save[i].wear}</h4>
+        <h4>Notes: ${save[i].notes}</h4>
+    `}
 }
 
 
 
 console.log(date);
-console.log(save);
 lookForExpired()
+readInSave()
 console.log(save);
 console.log(plane);
