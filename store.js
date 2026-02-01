@@ -12,8 +12,33 @@ for (let i = 0; i < p.length; i++) {
 
 let plane = [
     { type: 'Empty', photo: "Photos/Blank.png", price: 0, priceMultiplier: 0,
-         hobbs: 0, wear: 0, notes: "no range, nothing!", chanceToGet: 0.1, expire: 3
+         wear: 0, notes: "no range, nothing!", chanceToGet: 0.01, expire: 1
+        },
+
+// PISTON
+
+    { type: 'Cessna 152', photo: "Photos/Cessna_152.webp", price: 15000, priceMultiplier: 0.2,
+         wear: 5, notes: "", chanceToGet: 0.01, expire: 9
+        },
+    { type: 'Beechcraft Bonanza G36', photo: "Photos/Beechcraft_Bonanza_G36.webp", price: 80000, priceMultiplier: 0.1,
+         wear: 2, notes: "", chanceToGet: 0.008, expire: 7
+        },
+
+// TURBOPROP
+
+    { type: 'Beechcraft King Air 350i', photo: "Photos/Beechcraft_King_Air_350i.webp", price: 180000, priceMultiplier: 0.1,
+         wear: 3, notes: "", chanceToGet: 0.006, expire: 11
+        },
+
+// TURBOFAN
+
+    { type: 'Airbus A320neo', photo: "Photos/A20N.webp", price: 1900000, priceMultiplier: 0.08,
+         wear: 1, notes: "", chanceToGet: 0.002, expire: 9
+        },
+    { type: 'Airbus A310-300', photo: "Photos/Airbus_A310-300.webp", price: 1700000, priceMultiplier: 0.12,
+         wear: 6, notes: "", chanceToGet: 0.003, expire: 17
         }
+    
 ]
                                                                     /*     INIT END     */
                                                                      /*    UPDATE ADS    */
@@ -45,7 +70,7 @@ function generateAd(replacableAd) {
     }
 }
 function updateJSON() {
-    
+
 }
 function readInJSON() {
 
