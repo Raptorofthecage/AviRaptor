@@ -14,3 +14,5 @@ Uke 04:
 Uke 05:
         store.js, laget liste og begynte på objekter. JSON fil opprettet. 
         psuedokode laget. type="module endret på skript" psuedo skrevet over til JS.
+Uke 06:
+        Fylt på med mer fly
