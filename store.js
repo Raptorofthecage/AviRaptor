@@ -14,6 +14,9 @@ let plane = [
     { type: 'Empty', photo: "Photos/Blank.png", price: 0, priceMultiplier: 0,
          wear: 0, notes: "no range, nothing!", chanceToGet: 0.005, expire: 1
         },
+    { type: 'McDonnel Douglas FA-18E', photo: "Photos/McDonnel_Douglas_FA-18E.webp", price: 1900000, priceMultiplier: 0,
+         wear: 2, notes: "", chanceToGet: 0.0001, expire: 35
+        },
 
 // PISTON
 
@@ -100,6 +103,18 @@ let plane = [
         },
     { type: 'Daher TBM 930', photo: "Photos/Daher_TBM_930.webp", price: 150000, priceMultiplier: 0.06,
          wear: 1, notes: "", chanceToGet: 0.003, expire: 14
+        },
+    { type: 'Pilatus PC-6 Turbo porter', photo: "Photos/Pilatus_PC-6_Porter.webp", price: 100000, priceMultiplier: 0.2,
+         wear: 6, notes: "", chanceToGet: 0.008, expire: 8
+        },
+    { type: 'Pilatus PC-6 Turbo porter (Skis)', photo: "Photos/Pilatus_PC-6_Porter.webp", price: 110000, priceMultiplier: 0.2,
+         wear: 6, notes: "", chanceToGet: 0.004, expire: 12
+        },
+    { type: 'Pilatus PC-6 Turbo porter G950', photo: "Photos/Pilatus_PC-6_Porter.webp", price: 150000, priceMultiplier: 0.2,
+         wear: 4, notes: "", chanceToGet: 0.008, expire: 9
+        },
+    { type: 'Pilatus PC-6 Turbo porter G950 (Floats)', photo: "Photos/Pilatus_PC-6_Porter.webp", price: 155000, priceMultiplier: 0.2,
+         wear: 4, notes: "", chanceToGet: 0.008, expire: 8
         },
 
 // TURBOFAN
