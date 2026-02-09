@@ -1,8 +1,20 @@
                                                                     /*      INIT       */
 let date = new Date()
 let dateNow = [date.getUTCDate(), date.getUTCMonth() + 1, date.getUTCFullYear()]
-let save = await fetch("store.json")
+let save
+let localData = localStorage.getItem("save")
+try {
+if (localData && localData !== undefined) {
+    save = JSON.parse(localData)
+}
+else {
+    throw new Error("No Local Save")
+}} catch (e) {
+    console.warn("localStorage failure", e)
+    save = await fetch("store.json")
     save = await save.json()
+}
+
 
 let p = ["0","1","2","3","4","5","6","7","8","9","10","11","12",
     "13","14","15","16","17","18","19"]
@@ -162,11 +174,9 @@ function generateAd(replacableAd) {
                 save[replacableAd].wear = save[replacableAd].wear+Math.round(Math.random())
                 if (random < -0.4) {
                     save[replacableAd].wear = save[replacableAd].wear + 1
-                    save[replacableAd].expire = save[replacableAd].expire - 1
                 }
                 else if (random > 0.4) {
                     save[replacableAd].wear = save[replacableAd].wear - 1
-                    save[replacableAd].expire = save[replacableAd].expire + 1
                 }
                 save[replacableAd].wear = Math.min(10, Math.max(0, save[replacableAd].wear))
                 break
@@ -175,9 +185,6 @@ function generateAd(replacableAd) {
     }
 }
 
-function updateJSON() {
-
-}
 function readInSave() {
     for (let i = 0; i < save.length; i++) {
         p[i].innerHTML = `
@@ -191,8 +198,6 @@ function readInSave() {
 
 
 
-console.log(date);
 lookForExpired()
+localStorage.setItem("save",JSON.stringify(save))
 readInSave()
-console.log(save);
-console.log(plane);

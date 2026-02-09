@@ -16,3 +16,5 @@ Uke 05:
         psuedokode laget. type="module endret på skript" psuedo skrevet over til JS.
 Uke 06:
         Fylt på med mer fly (fylt på fly hjemme, brukte lang tid på å finne ut av Turbo Porter typene)
+Uke 07:
+        localStorage. storesave.js
