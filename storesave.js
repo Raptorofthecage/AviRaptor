@@ -1,7 +1,0 @@
-function download() {
-    
-}
-
-function upload() {
-
-}

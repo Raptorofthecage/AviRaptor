@@ -9,6 +9,10 @@
 <body>
     <div class="topline">
        <img src="aviraptor.png" alt="LOGO" class="logo">
+       <div class="topBar">
+        <h3>date</h3>
+        <h3 id="balance">Balance</h3>
+       </div>
     </div>
     <div class="main">
 
@@ -38,8 +42,9 @@
                 <h1>AviStore</h1>
             </div>
             <div>
-                <button></button>
-                <button></button>
+                <button id="download">download</button>
+                <button id="upload">upload</button>
+                <input type="file" id="file" accept=".iso" style="display:none">
             </div>
             <div class="storegrid">
                 <div id="P0" class="grid">
@@ -187,6 +192,7 @@
 
 
     </div>
-<script type="module" src="store.js"></script>
+<script src="store.js"></script>
+<script src="topBar.js"></script>
 </body>
 </html>

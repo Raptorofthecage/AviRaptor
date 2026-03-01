@@ -10,9 +10,71 @@ if (localData && localData !== undefined) {
 else {
     throw new Error("No Local Save")
 }} catch (e) {
-    console.warn("localStorage failure", e)
-    save = await fetch("store.json")
-    save = await save.json()
+    console.warn("localStorage failure (store)", e)
+    //save = await fetch("store.json")
+    //save = await save.json()
+    save = [
+    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
+         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
+        },
+    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
+         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
+        },
+    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
+         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
+        },
+    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
+         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
+        },
+    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
+         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
+        },
+    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
+         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
+        },
+    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
+         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
+        },
+    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
+         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
+        },
+    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
+         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
+        },
+    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
+         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
+        },
+    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
+         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
+        },
+    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
+         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
+        },
+    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
+         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
+        },
+    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
+         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
+        },
+    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
+         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
+        },
+    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
+         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
+        },
+    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
+         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
+        },
+    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
+         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
+        },
+    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
+         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
+        },
+    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
+         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
+        }
+]
 }
 
 
@@ -195,6 +257,32 @@ function readInSave() {
         <h4>Notes: ${save[i].notes}</h4>
     `}
 }
+
+                                                    /*      Upload/Download    */   
+document.getElementById("download").addEventListener("click",function download() {
+    let data = JSON.stringify(save)
+    let linkname = "avistore_"+dateNow+".iso"
+    let url = URL.createObjectURL(new Blob([data], { type: "application/json" }))
+
+    let link = document.createElement("a")
+    link.href = url
+    link.download = linkname
+    link.click()
+
+    URL.revokeObjectURL(url)
+}) 
+document.getElementById("upload").addEventListener("click",function upload() {
+    document.getElementById("file").click()
+}) 
+document.getElementById("file").addEventListener("change",function file(e) {
+    let reader = new FileReader()
+    reader.readAsText(e.target.files[0])
+    reader.onload = function() {
+        localStorage.setItem("save", JSON.stringify(JSON.parse(reader.result)))
+        alert("Save uploaded, this page will reload")
+        location.reload()
+    }
+})
 
 
 
