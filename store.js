@@ -3,6 +3,9 @@ let date = new Date()
 let dateNow = [date.getUTCDate(), date.getUTCMonth() + 1, date.getUTCFullYear()]
 let save
 let localData = localStorage.getItem("save")
+let storeGrid = document.querySelector(".storegrid")
+let p = [0,1,2,3,4,5,6,7,8,9,10,11,12,
+    13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29]
 try {
 if (localData && localData !== undefined) {
     save = JSON.parse(localData)
@@ -14,75 +17,14 @@ else {
     //save = await fetch("store.json")
     //save = await save.json()
     save = [
-    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
-         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
-        },
-    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
-         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
-        },
-    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
-         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
-        },
-    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
-         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
-        },
-    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
-         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
-        },
-    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
-         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
-        },
-    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
-         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
-        },
-    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
-         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
-        },
-    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
-         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
-        },
-    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
-         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
-        },
-    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
-         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
-        },
-    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
-         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
-        },
-    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
-         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
-        },
-    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
-         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
-        },
-    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
-         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
-        },
-    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
-         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
-        },
-    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
-         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
-        },
-    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
-         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
-        },
-    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
-         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
-        },
-    { "type": "Empty", "photo": "Photos/Blank.png", "price": 0, "priceMultiplier": 0,
-         "wear": 0, "data": "no range, nothing!", "chanceToGet": 0, "expire": [0,0,0]
-        }
-]
+    ]
+    for (let i = 0; i < p.length; i++) {
+        save.push({ type: "Empty", photo: "Photos/Blank.png", price: 0, "priceMultiplier": 0,
+         wear: 0, data: "no range, nothing!", chanceToGet: 0, expire: [0,0,0]})
+    }
 }
 
 
-let p = ["0","1","2","3","4","5","6","7","8","9","10","11","12",
-    "13","14","15","16","17","18","19"]
-for (let i = 0; i < p.length; i++) {
-    p[i] = document.querySelector("#P" + i)
-}
 
 let plane = [
     { type: 'Empty', photo: "Photos/Blank.png", price: 0, priceMultiplier: 0,
@@ -249,12 +191,14 @@ function generateAd(replacableAd) {
 
 function readInSave() {
     for (let i = 0; i < save.length; i++) {
-        p[i].innerHTML = `
-        <img src="${save[i].photo}" alt="photo of plane" class="imageOfPlane">
-        <h4>Type: ${save[i].type}</h4>
-        <h4>Price: ${save[i].price}$</h4>
-        <h4>Wear: ${save[i].wear}</h4>
-        <h4>Notes: ${save[i].notes}</h4>
+        storeGrid.innerHTML +=
+        `<div class="grid">
+            <img src="${save[i].photo}" alt="photo of plane" class="imageOfPlane">
+            <p class="planeInfo"><strong>Type:</strong>${save[i].type}</p>
+            <p class="planeInfo"><strong>Price:</strong>${save[i].price}$</p>
+            <p class="planeInfo"><strong>Wear:</strong>${save[i].wear}</p>
+            <p class="planeInfo"><strong>Notes:</strong>${save[i].notes}</p>
+        </div>
     `}
 }
 

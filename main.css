@@ -26,6 +26,10 @@ h4 {
     color: rgb(255, 255, 255);
     font-family: Arial, Helvetica, sans-serif;
 }
+.planeInfo {
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+}
 p {
     color: rgb(0, 0, 0);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -97,6 +101,18 @@ box-sizing: border-box;
     border-radius: 10px;
     justify-content: center;
 }
+.planeInfo {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8px 15px;
+    margin: 0;
+}
+.planeInfo dt {
+    font-weight: bold;
+}
+.planeInfo dl {
+    margin: 0;
+}
 @media only screen and (min-width: 799px) {
     .leftline {
         min-width: 15vw;
@@ -117,6 +133,11 @@ box-sizing: border-box;
         font-size: 1.8vw;
     }
     h4 {
+        margin: 2vw;
+        margin-top: 0;
+        font-size: 1.6vw;
+    }
+    .planeInfo {
         margin: 2vw;
         margin-top: 0;
         font-size: 1.6vw;
@@ -166,6 +187,11 @@ box-sizing: border-box;
         font-size: 8vw;
     }
     h4 {
+        margin: 5vw;
+        margin-top: 0;
+        font-size: 5vw;
+    }
+    .planeInfo {
         margin: 5vw;
         margin-top: 0;
         font-size: 5vw;
