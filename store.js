@@ -194,10 +194,10 @@ function readInSave() {
         storeGrid.innerHTML +=
         `<div class="grid">
             <img src="${save[i].photo}" alt="photo of plane" class="imageOfPlane">
-            <p class="planeInfo"><strong>Type:</strong>${save[i].type}</p>
-            <p class="planeInfo"><strong>Price:</strong>${save[i].price}$</p>
-            <p class="planeInfo"><strong>Wear:</strong>${save[i].wear}</p>
-            <p class="planeInfo"><strong>Notes:</strong>${save[i].notes}</p>
+            <p class="planeInfo"><strong>Type: </strong>${save[i].type}</p>
+            <p class="planeInfo"><strong>Price: </strong>${save[i].price}$</p>
+            <p class="planeInfo"><strong>Wear: </strong>${save[i].wear}</p>
+            <p class="planeInfo"><strong>Notes: </strong>${save[i].notes}</p>
         </div>
     `}
 }
