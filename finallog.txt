@@ -1,0 +1,39 @@
+Des. 10: Aviraptor Repository ble laget slik at det skal være mulig å jobbe fra flere forskjellige pcer
+
+Des. 16: Main.html og main.css ble opprettet. Denne uken var planen bare å få opp en helt enkel nettside med basic utseende, som man kan senere jobbe seg utfra. Jeg valgte å tidlig starte med @media, for å få opp universell utforming tidlid, og skape en standard som jeg kan fortsette på
+
+Des. 17: log.txt ble opprettet, for å få en slags oversikt over hva som ble gjort hver uke. Aviraptor-logoen ble satt inn og farge på nettside ble tilpasset. universell utforming prøvde jeg å tilpasse hele tiden når nye ting kom på nettsiden. Undersidene chartsmap, flightplan og trainingarea ble opprettet, css og main.html tilpasset til dem.
+
+Jan. 7: html sidene ble koblet sammen, slik at det skal være mulig til å klikke seg fram og tilbake mellom dem. 
+
+Jan. 8: Vi prøvde ut litt iframe, og fant ut at grunnet noen policyer på noen nettsider, var iframe disabled, slik at det ikke var mulig å hente dem fram. jeg valgte der å iframe de sidene, og ville linke til de andre som ikke tillot iframe (som ble ikke gjort til slutt)
+
+Jan. 12: Jeg fortsatte å prøve litt forskjellige ting angående iframe, med lite suksess. fold.js ble laget. planen var å ha linken til nettsidene på trainingarea.html, samtidig ha en vindu til dem, som du kan åpne og lukke.
+
+Jan. 14: fold funksjonen ble laget ferdig, med 4 vinduer på trainingarea.html 
+
+Jan. 19: Store.html ble laget, og integrert i de andre sidene.
+
+Jan. 21: store.js ble laget og var da helt tom. store.html la jeg til en grid, hvor alle boksene lå i html siden allerede. det var ikke noe god kode og ble endret senere. men var bra som en utgangspunkt. main.css blir forresten tilpasset hele tiden, inkl. universell utforming (@media). lagde mappe til bildene av flyene og la dem inn i mappa.
+
+Jan. 29: endret blank.png til logoen av aviraptor (så bedre ut sånn). storegrid ble fylt litt opp med bildene av "flyene" (siden det var bare en grid som skulle bli endret av store.js, var bildene bare blank.png og tom tekst). store.js ble påbegynt. jeg startet bare med det letteste (init fase), og lagde en array til flyene (objektene), hvor bare "Empty" lå da. lagde en array med et tall fra 0-19 som skule bli tallene gitt til hver grid boks. Til slutt ble det lagt til dato, siden tanken var å fåå det til slik at annonsene forsvinner etter dager --> store.json ble laget og skulle være save filen hvor annonsene skulle være lagret. det funket ikke, men det kommer vi tilbake til senere.
+
+Jan. 31: grunnet noen sikkerhetsinnstillinger, kunne ikke chrome og edge lese inn json filen, og derfor innstallerte jeg firefox hvor jeg skrudde av sikkerhetsinnstillingene som ikke tillot det. Det gjorde firefox sårbar hvis man skulle opp på virkelige nettet. så var det js scripten som jeg måtte lage..... eh ja.. var et problem, jeg husket ikke en ting fra det jeg lærte, så jeg tenkte å lage en psuedokode over hvordan jeg vil ha det, også implementere det i siden med js, samtidig som jeg lærer meg js igjen. det funket! Jeg så gjennom powerpointene til studentene, og jobbet psuedoen over i js. await funket ikke for en eller anen grunn i js koden også sa en venn, at jeg skal prøve å lagre det som en module i html koden (<script type="module" src="store.js"></script>). som funket.
+
+Feb. 1: De første flyene ble lagt inn i store.js (cessna 152, Beechcraft G36 som piston, Beechcraft 350i som turboprop, A310-100 og A320neo som turbofan) og kilometerstand (hobbs=timer flydd totalt). store.html grid blokkene ble fylt opp (resten), og readInSave funksjonen ble laget. den skulle lese inn saven.
+
+Feb. 2: La inn en Horde av fly, fikk litt utvalg endelig.
+
+Feb. 4: La inn litt mer fly.
+
+Feb. 9: LOCALSTORAGE!!! nei hva kan det vel være. fikk et lite problem med lagring av fly, siden det ikke var muliget å endre store.json. ville ikke ha localstorage, men fikk ikke noe anen løsning. Lagde to knapper slik at det skal være mulig å lagre og laste opp en eller anen fil som inneholder info om annonsene.
+
+Mar. 1: download og upload knapp ble fikset slik at de funker. ville ha egen js til knappene, men det ble bare bedre med de i selve store.js, så slettet storesave.js. topbar.js skulle vise bl.a. balance, og det skulle være mulig å tjene penger ved å legge in ruter i flight plan, og bruke pengene til forskjellige ting inkl. nye fly, men kom desverre ikke så langt. kanskje senere? :D. Flowchart laget over generateAd løkka. 
+
+Mar. 4: Her snakker vi god kode. Store.html hadde den lange koden over grid boksene. de ble slettet, og heller generert med javascript. det samme med den store arrayen med en liste over akkurat de samme tomme grid boksene, som heller ble generert i en løkke. camelCase ble fikset, og litt småting som kunne gjøre koden litt finere.
+
+Mar. 23: jeg slettet .planeinfo fra css-en uheldigvis. og la den tilbake da.
+
+noen begrunnelser
+
+Da jeg tenkte for meg siden tenkte jeg å ha en sidebar, hvor du kan klikke deg til de forskjellige sidene, sånn at det skal være lett å finne til dem. også har jeg js koden min, som er ifølge meg relativt lett leselig. jeg liker å dele den opp i 3 hovedgrupper. du har en init del på starten. det er der du legger til rent info som du trenger, importerer pakker osv. det er en hoveddel som er selve koden. der har jeg alle delkodene spittet i funksjoner, for da har du blokker av logisk kode som gjør en og en ting. hvis det er en action du vil gjerne, trenger du heller ikke lete lenge i koden, og trenger heller ikke endre store deler av koden, fordi når du først har en funksjon er den uavhengig av resten av koden til en viss grad, som vil gjøre videreutvikling lettere. også kommer vi til siste delen av koden som er bare en kort logging og starting av koden. det er som regel bare 2-3 linjer med startkode for første funksjon, også andre, så tredje. og hele skjer som en domino til slutt, og hver funksjon er en dominobrikke.
